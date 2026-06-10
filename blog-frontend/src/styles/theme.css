@@ -1,0 +1,140 @@
+/* ===== Global component overrides using CSS variables ===== */
+
+/* Cards & surfaces */
+.el-card,
+.el-table,
+.el-table__body-wrapper,
+.el-dialog {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-default) !important;
+  color: var(--text-primary) !important;
+}
+
+.el-card__header {
+  border-bottom-color: var(--border-light) !important;
+}
+
+/* Inputs */
+.el-input__wrapper,
+.el-textarea__inner {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-default) !important;
+  box-shadow: none !important;
+}
+.el-input__inner,
+.el-textarea__inner {
+  color: var(--text-primary) !important;
+}
+.el-input__inner::placeholder,
+.el-textarea__inner::placeholder {
+  color: var(--text-tertiary) !important;
+}
+
+/* Tables */
+.el-table th.el-table__cell {
+  background: var(--bg-hover) !important;
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border-default) !important;
+}
+.el-table td.el-table__cell {
+  border-bottom-color: var(--border-light) !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background: var(--bg-hover) !important;
+}
+
+/* Dropdowns */
+.el-dropdown-menu {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-default) !important;
+}
+.el-dropdown-menu__item {
+  color: var(--text-primary) !important;
+}
+.el-dropdown-menu__item:hover {
+  background: var(--bg-hover) !important;
+}
+.el-dropdown-menu__item.is-divided {
+  border-top-color: var(--border-light) !important;
+}
+
+/* Dialogs */
+.el-dialog__header {
+  border-bottom-color: var(--border-light) !important;
+}
+.el-dialog__title {
+  color: var(--text-primary) !important;
+}
+.el-dialog__body {
+  color: var(--text-primary) !important;
+}
+
+/* Pagination */
+.el-pagination .btn-prev,
+.el-pagination .btn-next,
+.el-pagination .el-pager li {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-default) !important;
+}
+.el-pagination .el-pager li.is-active {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* Tags - keep original colors for visibility */
+.el-tag--success { background: #e6f4ea !important; color: #1a7f37 !important; }
+.el-tag--danger { background: #fff0f0 !important; color: #cf222e !important; }
+html.dark .el-tag--success { background: rgba(46,160,67,.2) !important; color: #56d364 !important; }
+html.dark .el-tag--danger { background: rgba(248,81,73,.2) !important; color: #f47067 !important; }
+
+/* Empty state */
+.el-empty__description p { color: var(--text-tertiary) !important; }
+
+/* Badge */
+.el-badge__content { border: none !important; }
+
+/* Message box */
+.el-message-box {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-default) !important;
+}
+.el-message-box__title { color: var(--text-primary) !important; }
+.el-message-box__message { color: var(--text-secondary) !important; }
+
+/* Tabs & Menu */
+.el-menu {
+  background: var(--bg-surface) !important;
+  border-bottom-color: var(--border-default) !important;
+}
+.el-menu-item { color: var(--text-primary) !important; }
+.el-menu-item:hover { background: var(--bg-hover) !important; }
+.el-sub-menu__title { color: var(--text-primary) !important; }
+.el-sub-menu__title:hover { background: var(--bg-hover) !important; }
+
+/* Form labels */
+.el-form-item__label { color: var(--text-primary) !important; }
+
+/* Select */
+.el-select-dropdown {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-default) !important;
+}
+.el-select-dropdown__item {
+  color: var(--text-primary) !important;
+}
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background: var(--bg-hover) !important;
+}
+
+/* Tabs */
+.el-tabs__nav-wrap::after { background: var(--border-default) !important; }
+.el-tabs__item { color: var(--text-secondary) !important; }
+.el-tabs__item.is-active { color: var(--accent) !important; }
+.el-tabs__active-bar { background: var(--accent) !important; }
+
+/* Transitions */
+.el-card, .el-table, .el-dialog, .el-dropdown-menu {
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
